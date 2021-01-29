@@ -1,0 +1,17 @@
+@mixin flexBox($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin defaultUnitAndFont($unit, $font) {
+  @if ($unit == "rem") {
+    html {
+      font-size: 62.5%;
+      font-family: $font, Helvetica, sans-serif;
+    }
+  } @else {
+    html {
+      font-family: $font, Helvetica, sans-serif;
+    }
+  }
+}
